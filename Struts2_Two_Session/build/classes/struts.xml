@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+
+    <package name="default" namespace="/" extends="struts-default">
+    	<action name="Login" class="com.rebron.loginSession.action.UserAtion">	
+    		<result name="success">/success.jsp</result>
+    		<result name="error">/error.jsp</result>       		
+    	</action>
+    	<action name="searchUserAll" class="com.rebron.loginSession.action.UserAtion">	
+    		<result name="success">/userAll.jsp</result>
+    	</action>
+   </package>
+
+    <!-- Add packages here -->
+    <include file="message.xml"></include>
+
+</struts>
